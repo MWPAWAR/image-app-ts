@@ -1,0 +1,19 @@
+.imageSheet {
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 481px) {
+  .imageSheet {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 798px) {
+  .imageSheet {
+    width: 90%;
+    margin: auto;
+  }
+}

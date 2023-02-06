@@ -1,0 +1,15 @@
+.imgDescription {
+  margin-top: 10px;
+}
+
+.label {
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.description {
+  color: #5f6368;
+  font-size: 12px;
+  line-height: 1.5;
+}

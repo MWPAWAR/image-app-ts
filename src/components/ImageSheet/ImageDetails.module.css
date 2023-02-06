@@ -1,0 +1,33 @@
+.imgDetails {
+  margin-top: 10px;
+}
+
+.informationLabel {
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #dadce0;
+}
+
+.row {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #dadce0;
+}
+
+.row:first-child {
+  border-top: 1px solid #dadce0;
+}
+
+.label {
+  color: #5f6368;
+  font-size: 12px;
+  text-align: start;
+  width: 50%;
+}
+
+.value {
+  font-size: 12px;
+  width: 50%;
+  text-align: end;
+}
