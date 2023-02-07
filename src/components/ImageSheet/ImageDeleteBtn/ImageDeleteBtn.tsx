@@ -7,7 +7,7 @@ import { getString } from '../../../i18n'
 
 const ImageDeleteBtn = ({ selectedImage }: ImageDeleteBtnProps) => {
   const dispatch = useAppDispatch()
-  const handleDeleteClick = () => {
+  const handleDeleteClick = (): void => {
     dispatch(deleteImg({ id: selectedImage.id }))
     dispatch(resetSelectedImg())
   }

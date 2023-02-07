@@ -19,7 +19,7 @@ const TabList: FC = () => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const currentRoute: string = getCurrentNavigationRoute()
-  const handleTabClick = (link: string) => {
+  const handleTabClick = (link: string): void => {
     dispatch(resetSelectedImg())
     navigate(`/${tabNavigationPaths[link as TabNavigationKey]}`)
   }

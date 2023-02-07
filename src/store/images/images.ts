@@ -6,12 +6,16 @@ import {
   ImagesState,
   ImagesExtraReducerStateAction,
   ImagesReducerStateAction,
+  ImagesFetchApiResponse,
 } from './types'
 
-export const fetchImages = createAsyncThunk('images/fetchImages', async () => {
-  const response: ImageListTypes = await getImages()
-  return response
-})
+export const fetchImages = createAsyncThunk<ImagesFetchApiResponse>(
+  'images/fetchImages',
+  async () => {
+    const response: ImageListTypes = await getImages()
+    return response
+  }
+)
 
 const initialState: ImagesState = {
   status: API_FETCH_STATUS.IDLE,

@@ -13,14 +13,16 @@ import {
 import imageListContainerStyles from './ImageListContainer.module.css'
 import { ImageListContainerProps } from './types'
 import { getString } from '../../i18n'
+import { ImageListTypes, ImageTypes } from '../types'
 
 const ImageListContainer = ({ activeTab }: ImageListContainerProps) => {
   useFetchImages()
 
-  const selectedImage = useAppSelector(selectImageById)
-  const recentlyAddedImageList = useAppSelector(recentlyAddedImages)
-  const favoriteImageList = useAppSelector(favoriteImages)
-  const imageList =
+  const selectedImage: ImageTypes | undefined = useAppSelector(selectImageById)
+  const recentlyAddedImageList: ImageListTypes =
+    useAppSelector(recentlyAddedImages)
+  const favoriteImageList: ImageListTypes = useAppSelector(favoriteImages)
+  const imageList: ImageListTypes =
     activeTab === 'recentlyAdded' ? recentlyAddedImageList : favoriteImageList
 
   return (

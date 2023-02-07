@@ -1,5 +1,6 @@
 import { useAppSelector } from '../../customHooks/hooks'
 import { selectImageById } from '../../store/imageUiState/selectors'
+import { ImageTypes } from '../types'
 import Image from './Image/Image'
 import ImageDeleteBtn from './ImageDeleteBtn/ImageDeleteBtn'
 import ImageDescription from './ImageDescription/ImageDescription'
@@ -8,7 +9,7 @@ import imageSheetStyles from './ImageSheet.module.css'
 import { ImageSheetProps } from './types'
 
 const ImageSheet = ({ activeTab }: ImageSheetProps) => {
-  const selectedImage = useAppSelector(selectImageById)
+  const selectedImage: ImageTypes | undefined = useAppSelector(selectImageById)
 
   if (!selectedImage) return null
 
