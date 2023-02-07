@@ -5,10 +5,11 @@ import { useAppDispatch } from '../../customHooks/hooks'
 import { resetSelectedImg } from '../../store/imageUiState/imageUiState'
 import tabListStyles from './TabList.module.css'
 import { TabNavigationKey, TabNavigationPaths } from './types'
+import { getString } from '../../i18n'
 
 const tabNavigationPaths: TabNavigationPaths = {
   RECENTLY_ADDED: 'recently-added',
-  FAVORITED: 'favorites',
+  FAVORITED: 'favorited',
 }
 
 const getCurrentNavigationRoute = (): string =>
@@ -34,7 +35,7 @@ const TabList: FC = () => {
         )}
         onClick={() => handleTabClick('RECENTLY_ADDED')}
       >
-        Recently added
+        {getString('tabList.recentlyAdded')}
       </div>
       <div
         className={classNames(
@@ -45,7 +46,7 @@ const TabList: FC = () => {
         )}
         onClick={() => handleTabClick('FAVORITED')}
       >
-        Favorited
+        {getString('tabList.favorited')}
       </div>
     </div>
   )

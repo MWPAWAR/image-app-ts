@@ -9,8 +9,8 @@ const App: FC = () => (
       element={<ImageListContainer activeTab="recentlyAdded" />}
     />
     <Route
-      path="/favorites"
-      element={<ImageListContainer activeTab="favorites" />}
+      path="/favorited"
+      element={<ImageListContainer activeTab="favorited" />}
     />
     <Route path="/" element={<Navigate to="/recently-added" />} />
   </Routes>

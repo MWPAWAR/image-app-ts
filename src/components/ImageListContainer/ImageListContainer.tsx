@@ -12,6 +12,7 @@ import {
 } from '../../store/images/selectors'
 import imageListContainerStyles from './ImageListContainer.module.css'
 import { ImageListContainerProps } from './types'
+import { getString } from '../../i18n'
 
 const ImageListContainer = ({ activeTab }: ImageListContainerProps) => {
   useFetchImages()
@@ -31,7 +32,9 @@ const ImageListContainer = ({ activeTab }: ImageListContainerProps) => {
             : imageListContainerStyles.listContainerFullWidth
         }
       >
-        <h1 className={imageListContainerStyles.heading}>Photos</h1>
+        <h1 className={imageListContainerStyles.heading}>
+          {getString('imageListContainer.photosHeading')}
+        </h1>
         <TabList />
         <ImageList imageList={imageList} />
       </div>

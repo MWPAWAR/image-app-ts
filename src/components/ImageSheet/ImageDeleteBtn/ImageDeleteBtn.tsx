@@ -3,6 +3,7 @@ import imageDeleteBtnStyles from './ImageDeleteBtn.module.css'
 import { deleteImg } from '../../../store/images/images'
 import { resetSelectedImg } from '../../../store/imageUiState/imageUiState'
 import { ImageDeleteBtnProps } from './types'
+import { getString } from '../../../i18n'
 
 const ImageDeleteBtn = ({ selectedImage }: ImageDeleteBtnProps) => {
   const dispatch = useAppDispatch()
@@ -17,7 +18,7 @@ const ImageDeleteBtn = ({ selectedImage }: ImageDeleteBtnProps) => {
         className={imageDeleteBtnStyles.button}
         onClick={handleDeleteClick}
       >
-        Delete
+        {getString('imageSheet.deleteBtnLabel')}
       </button>
     </div>
   )

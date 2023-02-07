@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { ImageListTypes } from '../../components/types'
 import getImages from './api'
+import { API_FETCH_STATUS } from '../../constants'
 import {
   ImagesState,
   ImagesExtraReducerStateAction,
@@ -12,7 +13,10 @@ export const fetchImages = createAsyncThunk('images/fetchImages', async () => {
   return response
 })
 
-const initialState: ImagesState = { status: 'idle', images: [] }
+const initialState: ImagesState = {
+  status: API_FETCH_STATUS.IDLE,
+  images: [],
+}
 
 const imagesSlice = createSlice({
   name: 'images',
@@ -41,17 +45,17 @@ const imagesSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(fetchImages.pending, (state: ImagesState) => {
-        state.status = 'loading'
+        state.status = API_FETCH_STATUS.LOADING
       })
       .addCase(
         fetchImages.fulfilled,
         (state: ImagesState, action: ImagesExtraReducerStateAction) => {
-          state.status = 'success'
+          state.status = API_FETCH_STATUS.SUCCESS
           state.images = action.payload
         }
       )
       .addCase(fetchImages.rejected, (state: ImagesState) => {
-        state.status = 'error'
+        state.status = API_FETCH_STATUS.ERROR
       })
   },
 })

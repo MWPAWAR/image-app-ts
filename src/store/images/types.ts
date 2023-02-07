@@ -1,6 +1,6 @@
 import { ImageListTypes } from '../../components/types'
 
-export type ImagesStateStatus = 'idle' | 'loading' | 'success' | 'error'
+export type ImagesStateStatus = string
 
 export interface ImagesState {
   status: ImagesStateStatus
