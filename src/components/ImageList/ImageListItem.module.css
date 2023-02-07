@@ -11,7 +11,8 @@
   height: 150px;
 }
 
-.imageListItemImg:focus-within, .imageListItemImg:hover {
+.imageListItemImg:focus-within,
+.imageListItemImg:hover {
   border: 2px solid blue;
 }
 

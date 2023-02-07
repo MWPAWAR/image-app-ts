@@ -1,0 +1,42 @@
+.image {
+  border-radius: 10px;
+  width: 100%;
+  height: 230px;
+}
+
+.imageName {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.imageSize {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.imgNameAndFavtIconContainer {
+  margin-top: 10px;
+  display: flex;
+}
+
+.favtIcon {
+  text-align: end;
+  width: 20%;
+}
+
+.favtIconFilled:before {
+  content: '♥';
+  color: #5f6368;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.favtIconOutlined:before {
+  content: '♡';
+  color: #5f6368;
+  cursor: pointer;
+  font-size: 18px;
+}

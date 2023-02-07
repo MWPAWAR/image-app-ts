@@ -1,0 +1,11 @@
+.button {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dadce0;
+  cursor: pointer;
+}
+
+.deleteBtnFooter {
+  margin-top: 30px;
+}
