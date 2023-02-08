@@ -1,5 +1,6 @@
 .mainContainer {
   display: flex;
+  height: 100vh;
 }
 
 .heading {
