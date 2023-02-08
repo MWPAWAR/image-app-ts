@@ -1,1 +1,1 @@
-export const toggleDrawer = () => jest.fn()
+export const toggleDrawer = jest.fn()

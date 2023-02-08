@@ -36,9 +36,20 @@ describe('ImageSheetFooter', () => {
     expect(store.dispatch).toBeCalledWith({
       type: 'imageUiState/resetSelectedImg',
     })
+    expect(toggleDrawer).toHaveBeenCalled()
     expect(store.dispatch).toBeCalledWith({
       type: 'images/deleteImg',
       payload: { id: imageMock1.id },
     })
+  })
+
+  it('Calls dispatch if user clicks on back button', async () => {
+    const { getByText } = render(<ImageSheetFooterComponent />)
+    await userEvent.click(getByText('Back'))
+    expect(store.dispatch).toBeCalledTimes(1)
+    expect(store.dispatch).toBeCalledWith({
+      type: 'imageUiState/resetSelectedImg',
+    })
+    expect(toggleDrawer).toHaveBeenCalled()
   })
 })

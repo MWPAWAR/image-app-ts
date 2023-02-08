@@ -38,6 +38,7 @@ describe('Image', () => {
       type: 'images/toggleFavoriteImg',
       payload: { id: imageMock1.id },
     })
+    expect(toggleDrawer).toHaveBeenCalled()
     expect(store.dispatch).toHaveBeenCalledWith({
       type: 'imageUiState/resetSelectedImg',
     })

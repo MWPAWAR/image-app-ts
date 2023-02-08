@@ -6,6 +6,8 @@ import { imageMock1 } from '../../mocks/image'
 import { images } from '../../mocks/images'
 import ImageListContainer from '../../../components/ImageListContainer/ImageListContainer'
 
+jest.mock('react-modern-drawer', () => () => <div>React modern drawer</div>)
+
 describe('ImageListContainer', () => {
   const mockStore = configureStore([])
   const store = mockStore({
