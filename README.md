@@ -5,7 +5,6 @@ See live application here: https://image-app-ts.vercel.app/
 
 # Prerequisites
   - You should have `node` installed.
-  - You should have `yarn` installed
   - To install packages please run following command from application directory.
 
 # Installation 
