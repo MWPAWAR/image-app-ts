@@ -17,6 +17,7 @@ const withApiLoaderOrFailure =
           {getString('defaults.loadingText')}
         </div>
       )
+
     if (imagesFetchStatus === API_FETCH_STATUS.ERROR)
       return (
         <div className={styles.loaderOrErrorContainer}>

@@ -1,19 +1,19 @@
 import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { render } from '@testing-library/react'
-import renderer from 'react-test-renderer'
+import renderer, { ReactTestRenderer } from 'react-test-renderer'
+import configureStore, { MockStore, MockStoreCreator } from 'redux-mock-store'
+import { render, RenderResult } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import configureStore from 'redux-mock-store'
 import TabList from '../../../components/TabList/TabList'
 import { mockedNavigate } from '../../../setupTests'
 
 describe('TabList', () => {
-  const mockStore = configureStore([])
-  const store = mockStore({})
+  const mockStore: MockStoreCreator = configureStore([])
+  const store: MockStore = mockStore({})
   jest.spyOn(store, 'dispatch')
 
   it('Matches snapshot', () => {
-    const tree = renderer.create(
+    const tree: ReactTestRenderer = renderer.create(
       <MemoryRouter>
         <Provider store={store}>
           <TabList />
@@ -25,7 +25,7 @@ describe('TabList', () => {
   })
 
   it('calls dispatch if user clicks tabListItem', async () => {
-    const { getByText } = render(
+    const { getByText }: RenderResult = render(
       <MemoryRouter>
         <Provider store={store}>
           <TabList />

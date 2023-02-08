@@ -1,16 +1,16 @@
 import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import renderer from 'react-test-renderer'
-import configureStore from 'redux-mock-store'
-import { render } from '@testing-library/react'
+import renderer, { ReactTestRenderer } from 'react-test-renderer'
+import configureStore, { MockStore, MockStoreCreator } from 'redux-mock-store'
+import { render, RenderResult } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ImageSheetFooter from '../../../../components/ImageSheet/ImageSheetFooter/ImageSheetFooter'
 import { imageMock1 } from '../../../mocks/image'
 import { toggleDrawer } from '../../../test-utils'
 
 describe('ImageSheetFooter', () => {
-  const mockStore = configureStore([])
-  const store = mockStore({})
+  const mockStore: MockStoreCreator = configureStore([])
+  const store: MockStore = mockStore({})
   jest.spyOn(store, 'dispatch')
 
   const ImageSheetFooterComponent = () => (
@@ -25,12 +25,12 @@ describe('ImageSheetFooter', () => {
   )
 
   it('Matches ImageDeleteBtn snapshot', () => {
-    const tree = renderer.create(<ImageSheetFooterComponent />)
+    const tree: ReactTestRenderer = renderer.create(<ImageSheetFooterComponent />)
     expect(tree).toMatchSnapshot()
   })
 
   it('Calls dispatch twice if user clicks on delete button', async () => {
-    const { getByText } = render(<ImageSheetFooterComponent />)
+    const { getByText }: RenderResult = render(<ImageSheetFooterComponent />)
     await userEvent.click(getByText('Delete'))
     expect(store.dispatch).toBeCalledTimes(2)
     expect(store.dispatch).toBeCalledWith({
@@ -44,7 +44,7 @@ describe('ImageSheetFooter', () => {
   })
 
   it('Calls dispatch if user clicks on back button', async () => {
-    const { getByText } = render(<ImageSheetFooterComponent />)
+    const { getByText }: RenderResult = render(<ImageSheetFooterComponent />)
     await userEvent.click(getByText('Back'))
     expect(store.dispatch).toBeCalledTimes(1)
     expect(store.dispatch).toBeCalledWith({

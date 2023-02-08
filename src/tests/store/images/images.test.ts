@@ -23,7 +23,7 @@ describe('imagesStateReducer', () => {
       status: 'success',
       images: [imageMock1],
     }
-    const output = {
+    const output: ImagesState = {
       status: 'success',
       images: [imageMock1WithFavoritedInverted],
     }
@@ -37,7 +37,7 @@ describe('imagesStateReducer', () => {
       status: 'success',
       images,
     }
-    const output = { status: 'success', images: [imageMock2] }
+    const output: ImagesState = { status: 'success', images: [imageMock2] }
     expect(reducer(previousState, deleteImg({ id: imageMock1.id }))).toEqual(
       output
     )

@@ -1,14 +1,14 @@
 import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import renderer from 'react-test-renderer'
-import configureStore from 'redux-mock-store'
+import renderer, { ReactTestRenderer } from 'react-test-renderer'
+import configureStore, { MockStore, MockStoreCreator } from 'redux-mock-store'
 import withApiLoaderOrFailure from '../../../components/hocs/with-api-loader-or-failure'
 
 describe('withApiLoaderOrFailure', () => {
-  const mockStore = configureStore([])
+  const mockStore: MockStoreCreator = configureStore([])
 
   it('Matches snapshot with loading state', () => {
-    const store = mockStore({
+    const store: MockStore = mockStore({
       images: {
         images: [],
         status: 'loading',
@@ -18,7 +18,7 @@ describe('withApiLoaderOrFailure', () => {
     const Component = () => <div>Blah</div>
     const MockComponent = withApiLoaderOrFailure(Component)
 
-    const tree = renderer.create(
+    const tree: ReactTestRenderer = renderer.create(
       <MemoryRouter>
         <Provider store={store}>
           <MockComponent activeTab="recentlyAdded" />
@@ -29,7 +29,7 @@ describe('withApiLoaderOrFailure', () => {
   })
 
   it('Matches snapshot with error state', () => {
-    const store = mockStore({
+    const store: MockStore = mockStore({
       images: {
         images: [],
         status: 'error',
@@ -39,7 +39,7 @@ describe('withApiLoaderOrFailure', () => {
     const Component = () => <div>Blah</div>
     const MockComponent = withApiLoaderOrFailure(Component)
 
-    const tree = renderer.create(
+    const tree: ReactTestRenderer = renderer.create(
       <MemoryRouter>
         <Provider store={store}>
           <MockComponent activeTab="recentlyAdded" />
@@ -50,7 +50,7 @@ describe('withApiLoaderOrFailure', () => {
   })
 
   it('Matches snapshot with success state', () => {
-    const store = mockStore({
+    const store: MockStore = mockStore({
       images: {
         images: [],
         status: 'success',
@@ -60,7 +60,7 @@ describe('withApiLoaderOrFailure', () => {
     const Component = () => <div>Blah</div>
     const MockComponent = withApiLoaderOrFailure(Component)
 
-    const tree = renderer.create(
+    const tree: ReactTestRenderer = renderer.create(
       <MemoryRouter>
         <Provider store={store}>
           <MockComponent activeTab="recentlyAdded" />

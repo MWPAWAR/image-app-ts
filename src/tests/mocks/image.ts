@@ -1,4 +1,6 @@
-export const imageMock1 = {
+import { ImageTypes } from '../../components/types'
+
+export const imageMock1: ImageTypes = {
   id: '74957345-6f5b-4d66-ae9d-5d0071b40279',
   url: 'https://agencyanalytics-api.vercel.app/images/0.jpg',
   filename: 'tennessee_female_rubber.jpg',
@@ -20,7 +22,7 @@ export const imageMock1 = {
   favorited: true,
 }
 
-export const imageMock1WithFavoritedInverted = {
+export const imageMock1WithFavoritedInverted: ImageTypes = {
   id: '74957345-6f5b-4d66-ae9d-5d0071b40279',
   url: 'https://agencyanalytics-api.vercel.app/images/0.jpg',
   filename: 'tennessee_female_rubber.jpg',
@@ -42,7 +44,7 @@ export const imageMock1WithFavoritedInverted = {
   favorited: false,
 }
 
-export const imageMock2 = {
+export const imageMock2: ImageTypes = {
   id: '74957345-6f5b-4d66-ae9d-5d0071b40280',
   url: 'https://agencyanalytics-api.vercel.app/images/1.jpg',
   filename: 'virginia.jpg',

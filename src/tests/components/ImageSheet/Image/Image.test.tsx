@@ -1,16 +1,16 @@
 import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import renderer from 'react-test-renderer'
-import configureStore from 'redux-mock-store'
-import { render } from '@testing-library/react'
+import renderer, { ReactTestRenderer } from 'react-test-renderer'
+import configureStore, { MockStore, MockStoreCreator } from 'redux-mock-store'
+import { render, RenderResult } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Image from '../../../../components/ImageSheet/Image/Image'
 import { imageMock1 } from '../../../mocks/image'
 import { toggleDrawer } from '../../../test-utils'
 
 describe('Image', () => {
-  const mockStore = configureStore([])
-  const store = mockStore({})
+  const mockStore: MockStoreCreator = configureStore([])
+  const store: MockStore = mockStore({})
   jest.spyOn(store, 'dispatch')
 
   const ImageComponent = () => (
@@ -26,12 +26,12 @@ describe('Image', () => {
   )
 
   it('Matches snapshot', () => {
-    const tree = renderer.create(<ImageComponent />)
+    const tree: ReactTestRenderer = renderer.create(<ImageComponent />)
     expect(tree).toMatchSnapshot()
   })
 
   it('Calls dispatch if user clicks on fav icon', async () => {
-    const { getByTestId } = render(<ImageComponent />)
+    const { getByTestId }: RenderResult = render(<ImageComponent />)
     await userEvent.click(getByTestId('fav-icon'))
     expect(store.dispatch).toBeCalledTimes(2)
     expect(store.dispatch).toHaveBeenCalledWith({

@@ -1,7 +1,7 @@
 import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import renderer from 'react-test-renderer'
-import configureStore from 'redux-mock-store'
+import renderer, { ReactTestRenderer } from 'react-test-renderer'
+import configureStore, { MockStore, MockStoreCreator } from 'redux-mock-store'
 import { imageMock1 } from '../../mocks/image'
 import { images } from '../../mocks/images'
 import ImageListContainer from '../../../components/ImageListContainer/ImageListContainer'
@@ -9,8 +9,8 @@ import ImageListContainer from '../../../components/ImageListContainer/ImageList
 jest.mock('react-modern-drawer', () => () => <div>React modern drawer</div>)
 
 describe('ImageListContainer', () => {
-  const mockStore = configureStore([])
-  const store = mockStore({
+  const mockStore: MockStoreCreator = configureStore([])
+  const store: MockStore = mockStore({
     images: {
       images,
     },
@@ -28,7 +28,7 @@ describe('ImageListContainer', () => {
         </Provider>
       </MemoryRouter>
     )
-    const tree = renderer.create(Component)
+    const tree: ReactTestRenderer = renderer.create(Component)
     expect(tree).toMatchSnapshot()
   })
 
@@ -40,13 +40,13 @@ describe('ImageListContainer', () => {
         </Provider>
       </MemoryRouter>
     )
-    const tree = renderer.create(Component)
+    const tree: ReactTestRenderer = renderer.create(Component)
     expect(tree).toMatchSnapshot()
   })
 
   it('ImageListContainer matches snapshot if user have selected an image', () => {
-    const mockStore = configureStore([])
-    const store = mockStore({
+    const mockStore: MockStoreCreator = configureStore([])
+    const store: MockStore = mockStore({
       images: {
         images,
       },
@@ -62,7 +62,7 @@ describe('ImageListContainer', () => {
         </Provider>
       </MemoryRouter>
     )
-    const tree = renderer.create(Component)
+    const tree: ReactTestRenderer = renderer.create(Component)
     expect(tree).toMatchSnapshot()
   })
 })
