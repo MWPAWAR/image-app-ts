@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageListItem Matches snapshot 1`] = `
+<div
+  className="imageListItem"
+  data-testid="image-list-item"
+  onClick={[Function]}
+>
+  <img
+    alt="tennessee_female_rubber.jpg"
+    className="imageListItemImg"
+    src="https://agencyanalytics-api.vercel.app/images/0.jpg"
+    tabIndex={0}
+  />
+  <div
+    className="imageListItemName"
+  >
+    tennessee_female_rubber.jpg
+  </div>
+  <div
+    className="imageListItemSize"
+  >
+    4.6 MB
+  </div>
+</div>
+`;

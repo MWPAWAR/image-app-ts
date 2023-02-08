@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../customHooks/hooks'
+import { useAppSelector } from '../customHooks/hooks'
 import { selectImageById } from '../../store/imageUiState/selectors'
 import { ImageTypes } from '../types'
 import Image from './Image/Image'

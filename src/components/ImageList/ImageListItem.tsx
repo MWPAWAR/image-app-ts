@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../customHooks/hooks'
+import { useAppDispatch } from '../customHooks/hooks'
 import { getMbsTextByBytes } from '../../utils/get-mbs-by-bytes'
 import imageListItemStyles from './ImageListItem.module.css'
 import { setSelectedImg } from '../../store/imageUiState/imageUiState'
@@ -12,6 +12,7 @@ const ImageListItem = ({ image }: ImageListItemProps) => {
 
   return (
     <div
+      data-testid="image-list-item"
       onClick={handleImageClick}
       className={imageListItemStyles.imageListItem}
     >

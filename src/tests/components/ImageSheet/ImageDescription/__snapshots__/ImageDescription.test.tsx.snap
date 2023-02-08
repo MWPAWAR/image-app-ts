@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageDescription renders ImageDescription correctly 1`] = `
+<div
+  className="imgDescription"
+>
+  <div
+    className="label"
+  >
+    Description
+  </div>
+  <div
+    className="description"
+  >
+    Laboriosam eligendi inventore officia nemo. Quisquam explicabo voluptatem. Illo laborum facilis.
+  </div>
+</div>
+`;
+
+exports[`ImageDescription renders null if imageDescription is empty 1`] = `null`;

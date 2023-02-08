@@ -1,5 +1,5 @@
 import { ComponentType, FC } from 'react'
-import { useAppSelector } from '../../customHooks/hooks'
+import { useAppSelector } from '../customHooks/hooks'
 import { selectImagesFetchStatus } from '../../store/images/selectors'
 import { ComponentProps } from './types'
 import { getString } from '../../i18n'

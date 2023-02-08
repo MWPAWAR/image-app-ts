@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../customHooks/hooks'
-import { selectImagesFetchStatus } from '../store/images/selectors'
-import { fetchImages } from '../store/images/images'
-import { ImagesStateStatus } from '../store/images/types'
+import { useAppDispatch, useAppSelector } from './hooks'
+import { selectImagesFetchStatus } from '../../store/images/selectors'
+import { fetchImages } from '../../store/images/images'
+import { ImagesStateStatus } from '../../store/images/types'
 
 const useFetchImages = () => {
   const dispatch = useAppDispatch()

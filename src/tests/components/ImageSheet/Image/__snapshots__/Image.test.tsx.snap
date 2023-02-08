@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Matches snapshot 1`] = `
+<div>
+  <img
+    alt="tennessee_female_rubber.jpg"
+    className="image"
+    src="https://agencyanalytics-api.vercel.app/images/0.jpg"
+  />
+  <div
+    className="imgNameAndFavtIconContainer"
+  >
+    <div
+      className="imageName"
+    >
+      tennessee_female_rubber.jpg
+    </div>
+    <div
+      className="favtIcon favtIconFilled"
+      data-testid="fav-icon"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="imageSize"
+  >
+    4.6 MB
+  </div>
+</div>
+`;

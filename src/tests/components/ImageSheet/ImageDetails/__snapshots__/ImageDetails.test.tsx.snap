@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageDetails renders ImageDeatails correctly 1`] = `
+<div
+  className="imgDetails"
+>
+  <div
+    className="informationLabel"
+  >
+    Information
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="label"
+    >
+      Uploaded by
+    </div>
+    <div
+      className="value"
+    >
+      Ms. Jimmie Cole
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="label"
+    >
+      Created
+    </div>
+    <div
+      className="value"
+    >
+      July 15, 2017
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="label"
+    >
+      Last modified
+    </div>
+    <div
+      className="value"
+    >
+      December 16, 2022
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="label"
+    >
+      Dimensions
+    </div>
+    <div
+      className="value"
+    >
+      4800 X 3200
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="label"
+    >
+      Resolutions
+    </div>
+    <div
+      className="value"
+    >
+      72 X 72
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ImageDetails renders ImageDetails Row correctly 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="label"
+  >
+    ABC
+  </div>
+  <div
+    className="value"
+  >
+    XYZ
+  </div>
+</div>
+`;

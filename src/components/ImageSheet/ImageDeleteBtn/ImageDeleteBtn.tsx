@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../../customHooks/hooks'
+import { useAppDispatch } from '../../customHooks/hooks'
 import imageDeleteBtnStyles from './ImageDeleteBtn.module.css'
 import { deleteImg } from '../../../store/images/images'
 import { resetSelectedImg } from '../../../store/imageUiState/imageUiState'

@@ -6,7 +6,7 @@ import { ImageTypes } from '../types'
 const ImageList = ({ imageList }: ImageListProps) => (
   <div className={imageListStyles.imageList}>
     {imageList.map((image: ImageTypes) => (
-      <ImageListItem image={image} />
+      <ImageListItem key={image.id} image={image} />
     ))}
   </div>
 )

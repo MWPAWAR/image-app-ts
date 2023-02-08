@@ -3,7 +3,7 @@ import { getMonthDateAndYear } from '../../../utils/date-util'
 import imageDetailsStyles from './ImageDetails.module.css'
 import { RowProps, ImageDetailsProps } from './types'
 
-const Row = ({ label, value }: RowProps) => (
+export const Row = ({ label, value }: RowProps) => (
   <div className={imageDetailsStyles.row}>
     <div className={imageDetailsStyles.label}>{label}</div>
     <div className={imageDetailsStyles.value}>{value}</div>

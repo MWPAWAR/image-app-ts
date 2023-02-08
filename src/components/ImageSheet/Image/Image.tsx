@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import imageStyles from './Image.module.css'
-import { useAppDispatch } from '../../../customHooks/hooks'
+import { useAppDispatch } from '../../customHooks/hooks'
 import { getMbsTextByBytes } from '../../../utils/get-mbs-by-bytes'
 import { toggleFavoriteImg } from '../../../store/images/images'
 import { resetSelectedImg } from '../../../store/imageUiState/imageUiState'
@@ -24,6 +24,7 @@ const Image = ({ activeTab, selectedImage }: ImagePropsType) => {
       <div className={imageStyles.imgNameAndFavtIconContainer}>
         <div className={imageStyles.imageName}>{selectedImage.filename}</div>
         <div
+          data-testid="fav-icon"
           className={classNames(
             imageStyles.favtIcon,
             selectedImage.favorited

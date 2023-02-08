@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import classNames from 'classnames'
 import { useNavigate } from 'react-router-dom'
-import { useAppDispatch } from '../../customHooks/hooks'
+import { useAppDispatch } from '../customHooks/hooks'
 import { resetSelectedImg } from '../../store/imageUiState/imageUiState'
 import tabListStyles from './TabList.module.css'
 import { TabNavigationKey, TabNavigationPaths } from './types'

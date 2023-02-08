@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withApiLoaderOrFailure Matches snapshot with error state 1`] = `
+<div
+  className="loaderOrErrorContainer"
+>
+  Something went wrong
+</div>
+`;
+
+exports[`withApiLoaderOrFailure Matches snapshot with loading state 1`] = `
+<div
+  className="loaderOrErrorContainer"
+>
+  Loading...
+</div>
+`;
+
+exports[`withApiLoaderOrFailure Matches snapshot with success state 1`] = `
+<div>
+  Blah
+</div>
+`;

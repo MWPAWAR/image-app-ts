@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
-import { useAppSelector } from '../../customHooks/hooks'
-import useFetchImages from '../../customHooks/useFetchImages'
+import { useAppSelector } from '../customHooks/hooks'
+import useFetchImages from '../customHooks/useFetchImages'
 import ImageList from '../ImageList/ImageList'
 import ImageSheet from '../ImageSheet/ImageSheet'
 import withApiLoaderOrFailure from '../hocs/with-api-loader-or-failure'
