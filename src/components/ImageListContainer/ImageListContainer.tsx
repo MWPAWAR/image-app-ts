@@ -1,4 +1,6 @@
-import { Fragment } from 'react'
+import { useState } from 'react'
+import Drawer from 'react-modern-drawer'
+import 'react-modern-drawer/dist/index.css'
 import { useAppSelector } from '../customHooks/hooks'
 import useFetchImages from '../customHooks/useFetchImages'
 import ImageList from '../ImageList/ImageList'
@@ -25,6 +27,11 @@ const ImageListContainer = ({ activeTab }: ImageListContainerProps) => {
   const imageList: ImageListTypes =
     activeTab === 'recentlyAdded' ? recentlyAddedImageList : favoriteImageList
 
+  const [isOpen, setIsOpen] = useState<boolean>(!!selectedImage)
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState)
+  }
+
   return (
     <div className={imageListContainerStyles.mainContainer}>
       <div
@@ -38,15 +45,16 @@ const ImageListContainer = ({ activeTab }: ImageListContainerProps) => {
           {getString('imageListContainer.photosHeading')}
         </h1>
         <TabList />
-        <ImageList imageList={imageList} />
+        <ImageList imageList={imageList} toggleDrawer={toggleDrawer} />
       </div>
-      {selectedImage ? (
-        <div className={imageListContainerStyles.sheetContainer}>
-          <ImageSheet activeTab={activeTab} />
-        </div>
-      ) : (
-        <Fragment />
-      )}
+      <Drawer
+        open={isOpen}
+        onClose={toggleDrawer}
+        direction="right"
+        className={imageListContainerStyles.sheetContainer}
+      >
+        <ImageSheet activeTab={activeTab} toggleDrawer={toggleDrawer} />
+      </Drawer>
     </div>
   )
 }

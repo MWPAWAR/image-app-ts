@@ -6,12 +6,15 @@ import { toggleFavoriteImg } from '../../../store/images/images'
 import { resetSelectedImg } from '../../../store/imageUiState/imageUiState'
 import { ImagePropsType } from './types'
 
-const Image = ({ activeTab, selectedImage }: ImagePropsType) => {
+const Image = ({ activeTab, selectedImage, toggleDrawer }: ImagePropsType) => {
   const dispatch = useAppDispatch()
   const handleFavtClick = (): void => {
     dispatch(toggleFavoriteImg({ id: selectedImage.id }))
     // Do this to reset the selected img if the active tab is favorited.
-    if (activeTab === 'favorited') dispatch(resetSelectedImg())
+    if (activeTab === 'favorited') {
+      toggleDrawer()
+      dispatch(resetSelectedImg())
+    }
   }
 
   return (

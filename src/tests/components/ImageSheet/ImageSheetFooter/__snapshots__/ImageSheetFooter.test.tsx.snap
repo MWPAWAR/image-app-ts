@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageSheetFooter Matches ImageDeleteBtn snapshot 1`] = `
+<div
+  className="imageSheetFooter"
+>
+  <div
+    className="deleteBtn"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    className="backBtn"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      Back
+    </button>
+  </div>
+</div>
+`;

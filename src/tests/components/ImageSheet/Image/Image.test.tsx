@@ -6,6 +6,7 @@ import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Image from '../../../../components/ImageSheet/Image/Image'
 import { imageMock1 } from '../../../mocks/image'
+import { toggleDrawer } from '../../../test-utils'
 
 describe('Image', () => {
   const mockStore = configureStore([])
@@ -15,7 +16,11 @@ describe('Image', () => {
   const ImageComponent = () => (
     <MemoryRouter>
       <Provider store={store}>
-        <Image activeTab="favorited" selectedImage={imageMock1} />
+        <Image
+          activeTab="favorited"
+          selectedImage={imageMock1}
+          toggleDrawer={toggleDrawer}
+        />
       </Provider>
     </MemoryRouter>
   )

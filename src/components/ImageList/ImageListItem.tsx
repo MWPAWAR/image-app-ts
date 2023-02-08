@@ -4,10 +4,11 @@ import imageListItemStyles from './ImageListItem.module.css'
 import { setSelectedImg } from '../../store/imageUiState/imageUiState'
 import { ImageListItemProps } from './types'
 
-const ImageListItem = ({ image }: ImageListItemProps) => {
+const ImageListItem = ({ image, toggleDrawer }: ImageListItemProps) => {
   const dispatch = useAppDispatch()
   const handleImageClick = (): void => {
     dispatch(setSelectedImg({ id: image.id }))
+    toggleDrawer()
   }
 
   return (

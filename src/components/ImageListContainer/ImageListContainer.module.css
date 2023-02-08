@@ -1,6 +1,5 @@
 .mainContainer {
   display: flex;
-  flex-direction: column;
 }
 
 .heading {
@@ -18,29 +17,8 @@
 }
 
 .sheetContainer {
-  transition: transform 1s ease-in;
   background-color: #fff;
   border-top: outset 2px;
-  width: 100%;
-}
-
-@media only screen and (min-width: 480px) {
-  .listContainerSplitWidth,
-  .listContainerFullWidth {
-    padding: 0 20px;
-  }
-}
-
-@media only screen and (min-width: 798px) {
-  .mainContainer {
-    flex-direction: row;
-  }
-  .listContainerSplitWidth {
-    width: 70%;
-  }
-  .sheetContainer {
-    border-left: outset 2px;
-    padding: 10px;
-    width: 30%;
-  }
+  width: 400px !important;
+  overflow-y: scroll;
 }

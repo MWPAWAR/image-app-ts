@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer'
 import configureStore from 'redux-mock-store'
 import ImageList from '../../../components/ImageList/ImageList'
 import { images } from '../../mocks/images'
+import { toggleDrawer } from '../../test-utils'
 
 describe('ImageList', () => {
   it('renders ImageList correctly', () => {
@@ -13,7 +14,7 @@ describe('ImageList', () => {
     const ImageListComponent = () => (
       <MemoryRouter>
         <Provider store={store}>
-          <ImageList imageList={images} />
+          <ImageList imageList={images} toggleDrawer={toggleDrawer} />
         </Provider>
       </MemoryRouter>
     )

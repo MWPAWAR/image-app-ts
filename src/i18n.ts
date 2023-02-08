@@ -6,6 +6,7 @@ const enResources = {
   },
   imageSheet: {
     deleteBtnLabel: 'Delete',
+    backBtnLabel: 'Back',
     description: 'Description',
     information: 'Information',
     uploadedBy: 'Uploaded by',

@@ -6,6 +6,7 @@ import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ImageListItem from '../../../components/ImageList/ImageListItem'
 import { imageMock1 } from '../../mocks/image'
+import { toggleDrawer } from '../../test-utils'
 
 describe('ImageListItem', () => {
   const mockStore = configureStore([])
@@ -15,7 +16,7 @@ describe('ImageListItem', () => {
   const ImageListItemComponent = () => (
     <MemoryRouter>
       <Provider store={store}>
-        <ImageListItem image={imageMock1} />
+        <ImageListItem image={imageMock1} toggleDrawer={toggleDrawer} />
       </Provider>
     </MemoryRouter>
   )

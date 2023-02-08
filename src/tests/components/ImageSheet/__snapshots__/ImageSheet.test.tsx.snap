@@ -124,14 +124,28 @@ exports[`ImageSheet ImageSheet matches snapshot with data 1`] = `
     </div>
   </div>
   <div
-    className="deleteBtnFooter"
+    className="imageSheetFooter"
   >
-    <button
-      className="button"
-      onClick={[Function]}
+    <div
+      className="deleteBtn"
     >
-      Delete
-    </button>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </div>
+    <div
+      className="backBtn"
+    >
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Back
+      </button>
+    </div>
   </div>
 </div>
 `;

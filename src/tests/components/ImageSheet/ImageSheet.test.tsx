@@ -5,6 +5,7 @@ import configureStore from 'redux-mock-store'
 import ImageSheet from '../../../components/ImageSheet/ImageSheet'
 import { imageMock1 } from '../../mocks/image'
 import { images } from '../../mocks/images'
+import { toggleDrawer } from '../../test-utils'
 
 describe('ImageSheet', () => {
   it('ImageSheet matches snapshot with data', () => {
@@ -22,7 +23,7 @@ describe('ImageSheet', () => {
     const ImageSheetComponent = () => (
       <MemoryRouter>
         <Provider store={store}>
-          <ImageSheet activeTab="recentlyAdded" />
+          <ImageSheet activeTab="recentlyAdded" toggleDrawer={toggleDrawer} />
         </Provider>
       </MemoryRouter>
     )
@@ -46,7 +47,7 @@ describe('ImageSheet', () => {
     const ImageSheetComponent = () => (
       <MemoryRouter>
         <Provider store={store}>
-          <ImageSheet activeTab="recentlyAdded" />
+          <ImageSheet activeTab="recentlyAdded" toggleDrawer={toggleDrawer} />
         </Provider>
       </MemoryRouter>
     )

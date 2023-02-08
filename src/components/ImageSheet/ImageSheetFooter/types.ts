@@ -1,5 +1,6 @@
 import { ImageTypes } from '../../types'
 
-export interface ImageDeleteBtnProps {
+export interface ImageSheetFooterProps {
   selectedImage: ImageTypes
+  toggleDrawer: () => void
 }
