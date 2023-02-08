@@ -4,13 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from '../customHooks/hooks'
 import { resetSelectedImg } from '../../store/imageUiState/imageUiState'
 import tabListStyles from './TabList.module.css'
-import { TabNavigationPaths, TabNavigationKey } from '../../types'
+import { TabNavigationKey } from '../../types'
 import { getString } from '../../i18n'
-
-const tabNavigationPaths: TabNavigationPaths = {
-  RECENTLY_ADDED: 'recently-added',
-  FAVORITED: 'favorited',
-}
+import { tabNavigationPaths } from '../../constants'
 
 const getCurrentNavigationRoute = (): string =>
   window.location.pathname.replace('/', '')

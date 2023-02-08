@@ -6,7 +6,7 @@ export const API_FETCH_STATUS: ApiFetchStatus = {
   ERROR: 'error',
 }
 
-const tabNavigationPaths: TabNavigationPaths = {
+export const tabNavigationPaths: TabNavigationPaths = {
   RECENTLY_ADDED: 'recently-added',
   FAVORITED: 'favorited',
 }
