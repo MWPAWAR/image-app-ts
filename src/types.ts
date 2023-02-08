@@ -6,8 +6,8 @@ export interface TabNavigationPaths {
 export type TabNavigationKey = keyof TabNavigationPaths
 
 export interface ApiFetchStatus {
-  IDLE: string,
-  LOADING: string,
-  SUCCESS: string,
-  ERROR: string,
+  IDLE: string
+  LOADING: string
+  SUCCESS: string
+  ERROR: string
 }

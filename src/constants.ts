@@ -1,4 +1,4 @@
-import { TabNavigationPaths, ApiFetchStatus } from "./types"
+import { TabNavigationPaths, ApiFetchStatus } from './types'
 export const API_FETCH_STATUS: ApiFetchStatus = {
   IDLE: 'idle',
   LOADING: 'loading',

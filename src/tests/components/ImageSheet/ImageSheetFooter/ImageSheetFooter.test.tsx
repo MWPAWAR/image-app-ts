@@ -25,7 +25,9 @@ describe('ImageSheetFooter', () => {
   )
 
   it('Matches ImageDeleteBtn snapshot', () => {
-    const tree: ReactTestRenderer = renderer.create(<ImageSheetFooterComponent />)
+    const tree: ReactTestRenderer = renderer.create(
+      <ImageSheetFooterComponent />
+    )
     expect(tree).toMatchSnapshot()
   })
 
